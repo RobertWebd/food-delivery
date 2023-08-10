@@ -1,11 +1,34 @@
 // Строковые константа
 const DOLLAR = '$';
 
-const dishes = [
-  { id: '0', name: 'Kala Bhuna', cost: '$10', count: '0', src: '/icons/dish21.png' },
-  { id: '1', name: 'Meat Cu', cost: '$20', count: '0', src: '/icons/dish22.png' },
-  { id: '2', name: 'Chose your Meals', cost: '$30', count: '0', src: '/icons/dish23.png' },
-];
+const getDishes = () => {
+  const cachedDishes = localStorage.getItem('dishes');
+
+  if (cachedDishes) {
+    return JSON.parse(cachedDishes);
+  }
+
+  return [
+    { id: '0', name: 'Kala Bhuna', cost: '$10', count: '0', src: '/icons/dish21.png' },
+    { id: '1', name: 'Meat Cu', cost: '$20', count: '0', src: '/icons/dish22.png' },
+    { id: '2', name: 'Chose your Meals', cost: '$30', count: '0', src: '/icons/dish23.png' },
+  ];
+};
+
+const setDishesToCache = () => {
+  localStorage.setItem('dishes', JSON.stringify(dishes));
+};
+
+const dishes = getDishes();
+const selectedDishesAmount = dishes.reduce((amount, item) => amount + Number(item.count), 0);
+const basket = document.querySelector('.basket');
+
+if (selectedDishesAmount) {
+  const circleDiv = document.createElement('div');
+  circleDiv.classList.add('circle');
+  circleDiv.textContent = selectedDishesAmount;
+  basket.after(circleDiv);
+}
 
 // Открытие модального окна
 const modalOpenButtons = document.querySelectorAll('.bot__button');
@@ -52,7 +75,6 @@ closeButton.addEventListener('click', () => {
 
 // Кнопка Добавления ВНУТРИ Модалки
 const modalAddButton = document.getElementById('modalAddButton');
-const basket = document.querySelector('.basket');
 
 modalAddButton.addEventListener('click', (e) => {
   if (Number(modalCount.textContent) > 0) {
@@ -63,14 +85,13 @@ modalAddButton.addEventListener('click', (e) => {
       basket.after(circleDiv);
     }
     const circle = document.querySelector('.circle');
-    circle.textContent = Number(circle.textContent) + Number(modalCount.textContent);
+    const modalName = e.target.closest('.modalka__rect').querySelector('.rectangle__title').textContent;
+    const index = dishes.findIndex((dish) => dish.name === modalName);
 
-    // const dirtyDishId = e.target.closest('.modalka__rect').getAttribute('id');
-    // const dishId = dirtyDishId.split('-')[1];
-    // const targetDish = dishes.find(dish => dish.id === dishId);
-    let modalName = e.target.closest('.modalka__rect').querySelector('.rectangle__title').textContent;
-    let index = dishes.findIndex((dish) => dish.name === modalName);
+    circle.textContent = Number(circle.textContent) + Number(modalCount.textContent);
     dishes[index].count = Number(dishes[index].count) + Number(modalCount.textContent);
+
+    setDishesToCache();
   }
   modalWrapper.classList.remove('open');
 });
@@ -92,12 +113,15 @@ const closeBasket = () => {
 
   document.querySelector('.empty__basket').classList.remove('open');
   document.querySelector('.basket__bot').classList.remove('open');
+  document.querySelector('.basket__list').classList.remove('open');
 };
 
 basket.addEventListener('click', () => {
   if (isBasketOpened) {
     closeBasket();
   } else {
+    document.querySelector('.basket__list').classList.add('open');
+
     const isDishesChosen = dishes.some((dish) => dish.count > 0);
     if (isDishesChosen) {
       basketBot.classList.add('open');
@@ -108,17 +132,17 @@ basket.addEventListener('click', () => {
     dishes.forEach((dish) => {
       if (dish.count > 0) {
         const dishCost = Number(dish.cost.slice(1)) * Number(dish.count);
-        const htmlText = ` <div id=${dish.id} class="basket__item  open">
-                                    <div><img class="basket__img" src=${dish.src}></div>
-                                    <div class="item__name">${dish.name}</div>
-                                    <div class="item__price">$${dishCost}</div>
-                                    <div class="cart__button">
-                                    <div><button class="button__minus">-</button></div>
-                                    <div class="button_count">${dish.count}</div> 
-                                    <div><button class="button__plus">+</button></div>
-                                    </div>
-                                    <div><img class='trash' src="/icons/close.jpeg"></img></div>
-                                </div>`;
+        const htmlText = `<div id=${dish.id} class="basket__item  open">
+                            <div><img class="basket__img" src=${dish.src}></div>
+                            <div class="item__name">${dish.name}</div>
+                            <div class="item__price">$${dishCost}</div>
+                            <div class="cart__button">
+                              <div><button class="button__minus">-</button></div>
+                              <div class="button_count">${dish.count}</div> 
+                              <div><button class="button__plus">+</button></div>
+                            </div>
+                            <div><img class='trash' src="/icons/close.png"></img></div>
+                          </div>`;
 
         basketList.insertAdjacentHTML('afterbegin', htmlText);
         sum += Number(dishCost);
@@ -136,6 +160,8 @@ basket.addEventListener('click', () => {
           circle.textContent = Number(circle.textContent) + 1;
           cost.textContent = DOLLAR + Number(count.textContent) * dish.cost.slice(1);
           totalPrice.textContent = DOLLAR + (Number(totalPrice.textContent.slice(1)) + Number(dish.cost.slice(1)));
+
+          setDishesToCache();
         };
 
         // Здесь добавляем -
@@ -151,6 +177,8 @@ basket.addEventListener('click', () => {
           circle.textContent -= 1;
           cost.textContent = DOLLAR + Number(count.textContent) * dish.cost.slice(1);
           totalPrice.textContent = DOLLAR + (Number(totalPrice.textContent.slice(1)) - Number(dish.cost.slice(1)));
+
+          setDishesToCache();
         };
       }
     });
@@ -167,11 +195,12 @@ basket.addEventListener('click', () => {
           const idItem = item.getAttribute('id');
           const dish = dishes.find((dish) => dish.id === idItem);
           const circle = document.querySelector('.circle');
+          const basketItems = document.querySelectorAll('.basket__item');
 
-          let isBasketEmpty = document.querySelectorAll('.basket__item');
-          if (isBasketEmpty.length === 1) {
+          if (basketItems.length === 1) {
             document.querySelector('.basket__bot').classList.remove('open');
             document.querySelector('.empty__basket').classList.add('open');
+            document.querySelector('.circle').remove();
           } else {
             totalPrice.textContent = DOLLAR + (totalPrice.textContent.slice(1) - Number(dish.count) * Number(dish.cost.slice(1)));
           }
@@ -179,6 +208,8 @@ basket.addEventListener('click', () => {
           circle.textContent -= dish.count;
           dish.count = '0';
           item.remove();
+
+          setDishesToCache();
         });
       });
     });

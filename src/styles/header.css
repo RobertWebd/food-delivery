@@ -1,0 +1,66 @@
+.header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header__wrapper {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__menu.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 359px;
+  }
+  
+  .header__searchAndBasket {
+    display: flex;
+    align-items: center;
+  }
+  
+  .basket__wrapper{
+    position: relative;
+  }
+  
+  .basket {
+    cursor: pointer;
+    margin-left: 20px;
+    border: white solid 1px;
+    border-radius: 50%;
+    color: black;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.25);
+  }
+  
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.75);
+    border: 1px solid rgba(255, 0, 0, 0.55);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+  }
+  
+  .menu__text, .column__text,
+   .search{
+    cursor: pointer;
+  }
+  
+  .column__text:hover, .menu__text:hover, .search:hover{
+    opacity: 0.75;
+  } 
+  
+  .basket:hover,.button:hover, .bot__button:hover{
+    border: red solid 1px;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.55);
+  }

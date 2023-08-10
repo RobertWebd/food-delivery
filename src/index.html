@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/basket.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
     <title>Restaurant</title>
   </head>
   <body>
@@ -21,29 +26,17 @@
               <div class="search"><img src='/icons/searchIcon.png'></div>
               <div class="basket__wrapper">
                 <img class="basket" src='/icons/basketIcon.png'>
-
                 <div class="basket__list">
-
-
                   <div class="basket__bot">
                     <div class="totalPrice">$0</div>
-                    <div class="basket__link"><button>Перейти в корзину</button></div>
+                    <button class="basket__link">Go to cart</button>
                   </div>
-
-                  <div class="empty__basket">Корзина Пуста</div>
+                  <div class="empty__basket">Cart is empty</div>
                 </div>
-
               </div>
-
-
-
-
-
             </div>
-
           </div>
       </header>
-
 
       <main class="main">
         <div class="info__menu info">
@@ -143,10 +136,8 @@
             </div>
             <div class="modalka__wrapper">
               <div class="modalka">
-
-
                 <div class="modalka__rect">
-                  <img class='close__button' src="/icons/close.jpeg">
+                  <img class='close__button' src="/icons/close.png">
                   <img id='modalImg' class='block__icon modal__position' src="">
                   <div id='modalDishName'class="rectangle__title marginTop20"></div>
                   <div class="rectangle__subtext">We will deliver your food within 30 minutes in your town, If we would.</div>
@@ -159,10 +150,7 @@
                     </div>
                   </div>
                   <div><button id='modalAddButton'class="modal__addCart button">Add to Cart</button></div>
-                  
                 </div>
-
-
               </div>
             </div>
             <div class="block__info">
@@ -244,8 +232,6 @@
                   <div class="bot__button bot__button_red" id="Chose_your_Meals">Add to Cart</div>
                 </div>
               </div>
-
-
             </div>
             <div class="block__button">
               <div class="button button__red button_block ">
@@ -255,11 +241,7 @@
             </div>
           </div>
         </div>
-          <!-- <img class="fucnImg" src="/icons/rectBigBG.png" style="position: absolute; z-index: -1;"> -->
-
-
       </main>
-
 
       <footer class="footer">
         <div class="footer__content">
@@ -311,12 +293,9 @@
             </div>
           </div>
         </div>
-
-
-
       </footer>
     </div>
     <script src="index.js"></script>
-    <script src="basketAndModal.js"></script>
+    <script src="scripts/basketAndModal.js"></script>
   </body>
 </html>

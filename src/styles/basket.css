@@ -1,0 +1,89 @@
+.basket__list {
+    display: none;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    right: 120px;
+    z-index: 10;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .basket__list.open {
+    display: flex;
+  }
+  
+  .basket__item, .basket__bot {
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px;
+  }
+  
+  .basket__bot {
+   display: none;
+  }
+  
+  .totalPrice {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  .item__name {
+    font-size: 20px;
+    width: 125px;
+  }
+  
+  .item__price {
+    font-size: 20px;
+  }
+  
+  .basket__open {
+    display: flex;
+  }
+  
+  .basket__img {
+    width: 40px;
+  }
+  
+  .trash {
+    width: 15px;
+    margin-left: 10px;
+    z-index: 10;
+    fill: #f95555;
+    cursor: pointer;
+  }
+  
+  .basket__link {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    background-color: inherit;
+    font-weight: bold;
+  }
+  
+  .empty__basket {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 150px;
+  }
+  
+  .button__minus, .button__plus {
+    font-size: 20px;
+  }
+  
+  #button__minus_modal, #button__plus_modal {
+      background-color: white;
+      font-size: 24px;
+  }
+
+  .open {
+    display: flex;
+  }

@@ -1,0 +1,120 @@
+.footer {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    border-top: 1px solid #fdd5d5;
+  }
+  
+  .footer__content {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 48px 0px;
+  }
+  
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer__links.content {
+    display: flex;
+    width: 66%;
+    justify-content: space-between;
+  }
+  
+  .footer__links.column {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+  }
+  
+  .column__title {
+    color: var(--athik-black-b-4, #878787);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    padding-bottom: 16px;
+  }
+  
+  .column__text {
+    color: var(--athik-black-b-1, #2b2b2b);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+  }
+  
+  .column__text_red {
+    color: #f95555;
+  }
+  
+  .new {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 16px;
+    background: #f95555;
+    padding: 2px 8px;
+  }
+  
+  .footer__logo.info {
+    width: 11%; 
+    /* 11% 135px */
+  }
+  
+  .info__logo {
+    padding-bottom: 30px;
+  }
+  
+  .info__text {
+    color: var(--athik-black-b-1, #2b2b2b);
+    font-family: FONTSPRING DEMO - Quiche Flare;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  
+  .rightsWrapper {
+    width: 100%;
+    border-top: 1px solid #fdd5d5;
+  }
+  
+  .footer__rights {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+  }
+  
+  .footer__text {
+    color: #121212;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .footer__socialLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 168px;
+  }
+  
+  .twIcon, .catIcon,
+  .fIcon, .inIcon {
+    cursor: pointer;
+  }

@@ -928,12 +928,12 @@ width: 200px;
 }
 
 .button__minus, .button__plus {
-  background-color: red;
-};
+  background-color: #efefee;
+}
 
 #button__minus_modal, #button__plus_modal {
-background-color: white
-};
+    background-color: white;
+}
 
 
 

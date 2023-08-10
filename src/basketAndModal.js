@@ -143,17 +143,14 @@ basket.addEventListener('click', () => {
 
         basketMinus.onclick = (e) => {
           let count = e.target.closest('.cart__button').querySelector('.button_count');
-          if (count.textContent <= 0) {
-            return;
-          } else {
-            let cost = e.target.closest('.basket__item').querySelector('.item__price');
+          if (count.textContent <= 1) return;
+          let cost = e.target.closest('.basket__item').querySelector('.item__price');
 
-            count.textContent -= 1;
-            dish.count -= 1;
-            circle.textContent -= 1;
-            cost.textContent = DOLLAR + Number(count.textContent) * dish.cost.slice(1);
-            totalPrice.textContent = DOLLAR + (Number(totalPrice.textContent.slice(1)) - Number(dish.cost.slice(1)));
-          }
+          count.textContent -= 1;
+          dish.count -= 1;
+          circle.textContent -= 1;
+          cost.textContent = DOLLAR + Number(count.textContent) * dish.cost.slice(1);
+          totalPrice.textContent = DOLLAR + (Number(totalPrice.textContent.slice(1)) - Number(dish.cost.slice(1)));
         };
       }
     });

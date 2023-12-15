@@ -9,9 +9,9 @@ const getDishes = () => {
   }
 
   return [
-    { id: '0', name: 'Kala Bhuna', cost: '$10', count: '0', src: '/icons/dish21.png' },
-    { id: '1', name: 'Meat Cu', cost: '$20', count: '0', src: '/icons/dish22.png' },
-    { id: '2', name: 'Chose your Meals', cost: '$30', count: '0', src: '/icons/dish23.png' },
+    { id: '0', name: 'Kala Bhuna', cost: '$10', count: '0', src: 'icons/dish21.png' },
+    { id: '1', name: 'Meat Cu', cost: '$20', count: '0', src: 'icons/dish22.png' },
+    { id: '2', name: 'Chose your Meals', cost: '$30', count: '0', src: 'icons/dish23.png' },
   ];
 };
 
@@ -141,7 +141,7 @@ basket.addEventListener('click', () => {
                               <div class="button_count">${dish.count}</div> 
                               <div><button class="button__plus">+</button></div>
                             </div>
-                            <div><img class='trash' src="/icons/close.png"></img></div>
+                            <div><img class='trash' src="icons/close.png"></img></div>
                           </div>`;
 
         basketList.insertAdjacentHTML('afterbegin', htmlText);

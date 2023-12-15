@@ -3,39 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/basket.css" />
-    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
+    <link rel="stylesheet" href="src/styles/basket.css" />
+    <link rel="stylesheet" href="src/styles/modal.css" />
     <title>Restaurant</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-          <div class="header__wrapper">
-            <div class="header_icon"><img src='/icons/headerIcon.png'></div>
-            <div class="header__menu menu">
-              <div class="menu__text menu__text_home">Home</div>
-              <div class="menu__text">Menu</div>
-              <div class="menu__text">Services</div>
-              <div class="menu__text">Food Carts</div>
-            </div>
-            <div class="header__searchAndBasket">
-              <div class="search"><img src='/icons/searchIcon.png'></div>
-              <div class="basket__wrapper">
-                <img class="basket" src='/icons/basketIcon.png'>
-                <div class="basket__list">
-                  <div class="basket__bot">
-                    <div class="totalPrice">$0</div>
-                    <button class="basket__link">Go to cart</button>
-                  </div>
-                  <div class="empty__basket">Cart is empty</div>
+        <div class="header__wrapper">
+          <div class="header_icon"><img src="icons/headerIcon.png" /></div>
+          <div class="header__menu menu">
+            <div class="menu__text menu__text_home">Home</div>
+            <div class="menu__text">Menu</div>
+            <div class="menu__text">Services</div>
+            <div class="menu__text">Food Carts</div>
+          </div>
+          <div class="header__searchAndBasket">
+            <div class="search"><img src="icons/searchIcon.png" /></div>
+            <div class="basket__wrapper">
+              <img class="basket" src="icons/basketIcon.png" />
+              <div class="basket__list">
+                <div class="basket__bot">
+                  <div class="totalPrice">$0</div>
+                  <button class="basket__link">Go to cart</button>
                 </div>
+                <div class="empty__basket">Cart is empty</div>
               </div>
             </div>
           </div>
+        </div>
       </header>
 
       <main class="main">
@@ -44,84 +44,94 @@
             <div class="info__left leftInfo">
               <div class="leftInfo__top">
                 <div class="info__title">
-                  <div class="title__icon"><img class='burgerIcon' src='/icons//burgerIcon.png'></div>
+                  <div class="title__icon"><img class="burgerIcon" src="icons//burgerIcon.png" /></div>
                   <div class="title__text">Eat healthy, Stay Healthy</div>
                 </div>
                 <div class="info__block">
-                  <div class="block__title">Be the <span class='firstRed'>First</span> Delivery & Easy pick up</div>
+                  <div class="block__title">
+                    Be the
+                    <span class="firstRed">First</span>
+                    Delivery & Easy pick up
+                  </div>
                   <div class="block__text">We will deliver your food within 30 minutes in your town,If we would fail,we will give the food free.</div>
                 </div>
                 <div class="info__buttons">
                   <div class="button button__red button__red_order">
                     <div class="button__text">Order Now</div>
-                    <div><img class ="button__vector" src="/icons/VectorRight.png"></div>
+                    <div><img class="button__vector" src="icons/VectorRight.png" /></div>
                   </div>
                   <div class="button button__white button__white_book button__text">Book a Table</div>
                 </div>
               </div>
               <div class="leftInfo__bot">
                 <div class="info__dish dish">
-                  <div><img class="dish__icon" src='/icons/dish1.png'></div>
+                  <div><img class="dish__icon" src="icons/dish1.png" /></div>
                   <div class="dish__text">Chicken biryani</div>
-                  <img class='rect rect_1' src="/icons/RectangleGray.png" alt="">
+                  <img class="rect rect_1" src="icons/RectangleGray.png" alt="" />
                 </div>
                 <div class="info__dish dish">
-                  <div><img class="dish__icon" src='/icons/dish2.png'></div>
+                  <div><img class="dish__icon" src="icons/dish2.png" /></div>
                   <div class="dish__text">Hundi mutton</div>
-                  <img class='rect' src="/icons/RectangleRed.png" alt="">  
+                  <img class="rect" src="icons/RectangleRed.png" alt="" />
                 </div>
                 <div class="info__dish dish">
-                  <div><img class="dish__icon" src="/icons/dish3.png"></div>
-                  <div class="dish__text">Kala bhuna</div>    
-                  <img class='rect rect_3' src="/icons/RectangleGray.png" alt="">              
+                  <div><img class="dish__icon" src="icons/dish3.png" /></div>
+                  <div class="dish__text">Kala bhuna</div>
+                  <img class="rect rect_3" src="icons/RectangleGray.png" alt="" />
                 </div>
               </div>
-            <div class="secondElement"><img class="vector__red2" src="/icons/redVector2.svg"></div>
+              <div class="secondElement"><img class="vector__red2" src="icons/redVector2.svg" /></div>
             </div>
             <div class="discount">
               <div class="discount__text">
                 <div class="text__red">10%</div>
-                <div >Discount for 2 orders</div>
+                <div>Discount for 2 orders</div>
               </div>
-              <img class='discount__icon' src='/icons/percent.png'>
+              <img class="discount__icon" src="icons/percent.png" />
             </div>
             <div class="info__right rightInfo">
               <div class="rightInfo__top">
                 <div class="carousel">
-                <div class="carousel-slider">
-                  <div class="burgerView">
-                    <div> <img class="burgerBig" src="/icons/bugerBig.png" alt="SVG Image"></div>
-                    <div> <img class="blackRect" src="/icons/blackRect.png"></div>
-                  </div>
-                  <div class="burgerView">
-                    <div> <img class="burgerBig" src="/icons/bugerBig.png"></div>
-                    <div> 
-                      <svg class='blackRect' xmlns="http://www.w3.org/2000/svg" width="460" height="554" viewBox="0 0 460 554" fill="none">
-                        <path d="M30.0001 484C30.0001 500.569 43.4316 514 60.0001 514L400 514C416.569 514 430 500.569 430 484L430 50.8942C430 31.8648 412.511 17.6437 393.882 21.5248L53.8816 92.3581C39.97 95.2563 30.0002 107.517 30.0002 121.727L30.0001 484Z" fill="#91f5165c"/>
-                      </svg> 
+                  <div class="carousel-slider">
+                    <div class="burgerView">
+                      <div><img class="burgerBig" src="icons/bugerBig.png" alt="SVG Image" /></div>
+                      <div><img class="blackRect" src="icons/blackRect.png" /></div>
                     </div>
-                  </div>
-                  <div class="burgerView">
-                    <div> <img class="burgerBig" src="/icons/bugerBig.png"></div>
-                    <div>         
-                      <svg class='blackRect'xmlns="http://www.w3.org/2000/svg" width="460" height="554" viewBox="0 0 460 554" fill="none">
-                        <path d="M30.0001 484C30.0001 500.569 43.4316 514 60.0001 514L400 514C416.569 514 430 500.569 430 484L430 50.8942C430 31.8648 412.511 17.6437 393.882 21.5248L53.8816 92.3581C39.97 95.2563 30.0002 107.517 30.0002 121.727L30.0001 484Z" fill="#006dfb5c"/>
-                      </svg> 
+                    <div class="burgerView">
+                      <div><img class="burgerBig" src="icons/bugerBig.png" /></div>
+                      <div>
+                        <svg class="blackRect" xmlns="http://www.w3.org/2000/svg" width="460" height="554" viewBox="0 0 460 554" fill="none">
+                          <path
+                            d="M30.0001 484C30.0001 500.569 43.4316 514 60.0001 514L400 514C416.569 514 430 500.569 430 484L430 50.8942C430 31.8648 412.511 17.6437 393.882 21.5248L53.8816 92.3581C39.97 95.2563 30.0002 107.517 30.0002 121.727L30.0001 484Z"
+                            fill="#91f5165c"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="burgerView">
+                      <div><img class="burgerBig" src="icons/bugerBig.png" /></div>
+                      <div>
+                        <svg class="blackRect" xmlns="http://www.w3.org/2000/svg" width="460" height="554" viewBox="0 0 460 554" fill="none">
+                          <path
+                            d="M30.0001 484C30.0001 500.569 43.4316 514 60.0001 514L400 514C416.569 514 430 500.569 430 484L430 50.8942C430 31.8648 412.511 17.6437 393.882 21.5248L53.8816 92.3581C39.97 95.2563 30.0002 107.517 30.0002 121.727L30.0001 484Z"
+                            fill="#006dfb5c"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
                 <div class="buttons">
                   <div class="button button__white button__white_left">
-                   <img class ="button__vector button__vector_left" src="/icons/VectorLeft.png">
+                    <img class="button__vector button__vector_left" src="icons/VectorLeft.png" />
                   </div>
                   <div class="button button__red button__red_right">
-                      <img class ="button__vector button__vector_right" src="/icons/VectorRight.png">
+                    <img class="button__vector button__vector_right" src="icons/VectorRight.png" />
                   </div>
                 </div>
                 <div class="rightInfo__bot subTitle">
-                  <div><img class='subTitle__avatar' src="/icons/avatar.png"></div>
-                  <div><img  class="redVector" src="/icons/redVector.png"></div>
+                  <div><img class="subTitle__avatar" src="icons/avatar.png" /></div>
+                  <div><img class="redVector" src="icons/redVector.png" /></div>
                   <div class="subTitle__text">We will deliver your food within 30 minutes in your town.</div>
                 </div>
               </div>
@@ -132,73 +142,87 @@
           <div class="block__wrapper">
             <div class="block__header">
               Our Popular Dishes
-              <svg class='red__vector3' xmlns="http://www.w3.org/2000/svg" width="167" height="16" viewBox="0 0 167 16" fill="none"><path d="M165.75 2.18074C138.993 10.0629 68.6343 21.8454 1.25227 5.91793" stroke="#F95555" stroke-width="3"/> </svg>
+              <svg class="red__vector3" xmlns="http://www.w3.org/2000/svg" width="167" height="16" viewBox="0 0 167 16" fill="none">
+                <path d="M165.75 2.18074C138.993 10.0629 68.6343 21.8454 1.25227 5.91793" stroke="#F95555" stroke-width="3" />
+              </svg>
             </div>
             <div class="modalka__wrapper">
               <div class="modalka">
                 <div class="modalka__rect">
-                  <img class='close__button' src="/icons/close.png">
-                  <img id='modalImg' class='block__icon modal__position' src="">
-                  <div id='modalDishName'class="rectangle__title marginTop20"></div>
+                  <img class="close__button" src="icons/close.png" />
+                  <img id="modalImg" class="block__icon modal__position" src="" />
+                  <div id="modalDishName" class="rectangle__title marginTop20"></div>
                   <div class="rectangle__subtext">We will deliver your food within 30 minutes in your town, If we would.</div>
                   <div class="rectangle__bot width">
-                    <div ><span id='modalTotalCost' class="bot__price fontSize20">$0</span></div>
+                    <div><span id="modalTotalCost" class="bot__price fontSize20">$0</span></div>
                     <div class="cart__button">
                       <div><button id="button__minus_modal">-</button></div>
-                      <div id='ModalCount' class="button_count">0</div> 
+                      <div id="ModalCount" class="button_count">0</div>
                       <div><button id="button__plus_modal">+</button></div>
                     </div>
                   </div>
-                  <div><button id='modalAddButton'class="modal__addCart button">Add to Cart</button></div>
+                  <div><button id="modalAddButton" class="modal__addCart button">Add to Cart</button></div>
                 </div>
               </div>
             </div>
             <div class="block__info">
-              <div id='dish-0' class="block__rectangle">
-                <img class='block__rectBG' src="/icons/Subtract21.svg">
-                <img class='block__icon' src="/icons/dish21.png">
+              <div id="dish-0" class="block__rectangle">
+                <img class="block__rectBG" src="icons/Subtract21.svg" />
+                <img class="block__icon" src="icons/dish21.png" />
                 <div class="rectangle__rate">
                   <div class="rate__option">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15"/>
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15" />
                     </svg>
                     <div>4.5</div>
                   </div>
                   <div class="rate__option">
                     <div class="rate__option_like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z" stroke="#F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z"
+                          stroke="#F00"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </div>
                     <div>1.5k</div>
                   </div>
-               </div>
+                </div>
                 <div class="rectangle__title">Kala Bhuna</div>
                 <div class="rectangle__subtext">We will deliver your food within 30 minutes in your town, If we would.</div>
                 <div class="rectangle__bot">
                   <div class="bot__price">$10</div>
-                  <div class="bot__button bot__button_red" id ='Kala_Bhuna'>Add to Cart</div>
+                  <div class="bot__button bot__button_red" id="Kala_Bhuna">Add to Cart</div>
                 </div>
               </div>
-              <div id='dish-1' class="block__rectangle">
-                <img class='block__rectBG' src="/icons/rect22.png">
-                <img class='block__icon' src="/icons/dish22.png">
+              <div id="dish-1" class="block__rectangle">
+                <img class="block__rectBG" src="icons/rect22.png" />
+                <img class="block__icon" src="icons/dish22.png" />
                 <div class="rectangle__rate">
                   <div class="rate__option">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15"/>
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15" />
                     </svg>
                     <div>4.5</div>
                   </div>
                   <div class="rate__option">
-                    <div class='rate__option_like'>
+                    <div class="rate__option_like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z" stroke="#F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z"
+                          stroke="#F00"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </div>
                     <div>1.5k</div>
                   </div>
-               </div>
+                </div>
                 <div class="rectangle__title">Meat Cu</div>
                 <div class="rectangle__subtext">We will deliver your food within 30 minutes in your town, If we would.</div>
                 <div class="rectangle__bot">
@@ -206,25 +230,31 @@
                   <div class="bot__button bot__button_red" id="Meat_Cu">Add to Cart</div>
                 </div>
               </div>
-              <div id='dish-2' class="block__rectangle">
-                <img class='block__rectBG' src="/icons/Subtract21.svg">
-                <img class='block__icon' src="/icons/dish23.png">
+              <div id="dish-2" class="block__rectangle">
+                <img class="block__rectBG" src="icons/Subtract21.svg" />
+                <img class="block__icon" src="icons/dish23.png" />
                 <div class="rectangle__rate">
-                  <div class="rate__option ">
+                  <div class="rate__option">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15"/>
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBCB15" />
                     </svg>
                     <div>4.5</div>
                   </div>
                   <div class="rate__option">
-                    <div  class='rate__option_like'>
+                    <div class="rate__option_like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z" stroke="#F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
+                        <path
+                          d="M20.8382 4.60987C20.3274 4.09888 19.721 3.69352 19.0535 3.41696C18.3861 3.14039 17.6707 2.99805 16.9482 2.99805C16.2257 2.99805 15.5103 3.14039 14.8428 3.41696C14.1754 3.69352 13.5689 4.09888 13.0582 4.60987L11.9982 5.66987L10.9382 4.60987C9.90647 3.57818 8.5072 2.99858 7.04817 2.99858C5.58913 2.99858 4.18986 3.57818 3.15817 4.60987C2.12647 5.64156 1.54688 7.04084 1.54688 8.49987C1.54687 9.95891 2.12647 11.3582 3.15817 12.3899L4.21817 13.4499L11.9982 21.2299L19.7782 13.4499L20.8382 12.3899C21.3492 11.8791 21.7545 11.2727 22.0311 10.6052C22.3076 9.93777 22.45 9.22236 22.45 8.49987C22.45 7.77738 22.3076 7.06198 22.0311 6.39452C21.7545 5.72706 21.3492 5.12063 20.8382 4.60987V4.60987Z"
+                          stroke="#F00"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
                     <div>1.5k</div>
                   </div>
-               </div>
+                </div>
                 <div class="rectangle__title">Chose your Meals</div>
                 <div class="rectangle__subtext">We will deliver your food within 30 minutes in your town, If we would.</div>
                 <div class="rectangle__bot">
@@ -234,9 +264,9 @@
               </div>
             </div>
             <div class="block__button">
-              <div class="button button__red button_block ">
+              <div class="button button__red button_block">
                 <div class="button__text button__text_block">See All Dishes</div>
-                <div><img class ="button__vector" src="/icons/VectorRight.png"></div>
+                <div><img class="button__vector" src="icons/VectorRight.png" /></div>
               </div>
             </div>
           </div>
@@ -247,14 +277,17 @@
         <div class="footer__content">
           <div class="footer__wrapper">
             <div class="footer__logo info">
-              <div class="info__logo"> <img src='/icons/headerIcon.png'></div>
+              <div class="info__logo"><img src="icons/headerIcon.png" /></div>
               <div class="info__text">Design amazing digital experiences that create more happy in the world.</div>
             </div>
             <div class="footer__links content">
               <div class="footer__links column">
                 <div class="column__title">Product</div>
                 <div class="column__text column__text_red">Home</div>
-                <div class="column__text">Products <span class='new'>New</span></div>
+                <div class="column__text">
+                  Products
+                  <span class="new">New</span>
+                </div>
                 <div class="column__text">About</div>
                 <div class="column__text">Contact</div>
                 <div class="column__text">FAQ</div>
@@ -286,16 +319,16 @@
               2022 Falcon Thought. All rights reserved.
             </div>
             <div class="footer__socialLinks">
-              <div> <img class ='twIcon' src="../icons/Socialicon.svg"> </div>
-              <div> <img class ='catIcon' src="../icons/SocialiconCat.png"> </div>
-              <div> <img class ='fIcon' src="../icons/SocialiconF.png"> </div>
-              <div> <img class ='inIcon' src="../icons/SocialiconIN.png"> </div>
+              <div><img class="twIcon" src="icons/Socialicon.svg" /></div>
+              <div><img class="catIcon" src="icons/SocialiconCat.png" /></div>
+              <div><img class="fIcon" src="icons/SocialiconF.png" /></div>
+              <div><img class="inIcon" src="icons/SocialiconIN.png" /></div>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <script src="index.js"></script>
-    <script src="scripts/basketAndModal.js"></script>
+    <script src="src/index.js"></script>
+    <script src="src/scripts/basketAndModal.js"></script>
   </body>
 </html>
